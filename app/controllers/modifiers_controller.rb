@@ -1,0 +1,2 @@
+class ModifiersController < ApplicationController
+end
