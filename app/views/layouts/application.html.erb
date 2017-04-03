@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ProjectAdd</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="nav">
+    <ul class="navbar">
+      <li><%= link_to "Home", root_path, class: "#{cp(root_path)} navButton" %></li>
+      <li><%= link_to "Characters", characters_path, class: "#{cp(characters_path)} navButton" %></li>
+      <li><%= link_to "Create Character", new_character_path, class: "#{cp(new_character_path)} navButton" %></li>
+    </ul>
+  </div>
+<div class="center">
+  <%= yield %>
+</div>
+</body>
 </html>
