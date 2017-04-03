@@ -54,14 +54,14 @@ a.navButton {
     float: left;
 }
 
-a.current {
-  background-color: #555;
-  color: white;
+ul li a.current {
+  background-color: #f29100;
+  color: black;
 }
 
 a.navButton:hover {
-    background-color: #555;
-    color: white;
+    background-color: #f29100;
+    color: black;
 }
 
 ul.navbar {
@@ -82,5 +82,5 @@ ul.navbar {
 .nav {
     margin: auto;
     width: 80%;
-    padding: 10px 0px;
+    padding: 10px;
 }
