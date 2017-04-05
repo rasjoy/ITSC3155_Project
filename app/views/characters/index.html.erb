@@ -1,12 +1,13 @@
 <h1>Character Page</h1>
 <p>Below is a list of all created characters.</p>
+<table>
  <tr>
         <th>Name</th>
     </tr>
     
     <% @characters.each do |character| %>
         <tr>
-            <td><%= link_to character.name, character_path(character) %></td>
+           <td> <%= link_to character.name, character_path(character) %></td>
         </tr>
     <% end %>
 </table>
