@@ -10,31 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405152654) do
+ActiveRecord::Schema.define(version: 20170405183315) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "races", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "startingHP"
-    t.integer  "hitDice"
-    t.string   "primaryAbility"
-    t.string   "savingThrow1"
-    t.string   "savingThrow2"
-    t.text     "armorPref"
-    t.text     "weaponPref"
-    t.integer  "profBonus"
-    t.string   "skills"
-    t.string   "startingEquip"
-    t.integer  "cantrip"
-    t.integer  "spellSlots"
-    t.text     "spells"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
   end
 
 end
