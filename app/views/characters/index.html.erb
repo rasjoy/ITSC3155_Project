@@ -1,13 +1,25 @@
 <h1>Character Page</h1>
 <p>Below is a list of all created characters.</p>
 <table>
- <tr>
+    <tr>
         <th>Name</th>
+        <th>Job</th>
+        <th>Race</th>
+        <th>Birthdate</th>
     </tr>
     
+    <tr></tr>
     <% @characters.each do |character| %>
-        <tr>
-           <td> <%= link_to character.name, character_path(character) %></td>
-        </tr>
+        <td> <%= link_to character.name, character_path(character) %></td>
+        <td>
+            
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            <%= character.created_at %>
+        </td>
+    </tr>
     <% end %>
 </table>
