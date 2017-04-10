@@ -1,3 +1,12 @@
+<table>
+    <tr>
+        <td><%= link_to 'Edit', edit_character_path(@character) %></td>
+        <td><%= link_to 'Delete', character_path(@character),
+                              method: :destroy,
+                              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+</table>
+
 <p>
     <strong>Name:</strong>
     <%= @character.name %>
