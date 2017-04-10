@@ -20,7 +20,11 @@ class CharactersController < ApplicationController
         end
     end
     
-     def update
+    def edit
+        @character = Character.find(params[:id])
+    end
+    
+    def update
         @character = Character.find(params[:id])
         if @character.update(characters_params)
             redirect_to @character
