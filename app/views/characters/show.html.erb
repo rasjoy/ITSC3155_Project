@@ -2,7 +2,7 @@
     <tr>
         <td><%= link_to 'Edit', edit_character_path(@character) %></td>
         <td><%= link_to 'Delete', character_path(@character),
-                              method: :destroy,
+                              method: :delete,
                               data: { confirm: 'Are you sure?' } %></td>
     </tr>
 </table>
