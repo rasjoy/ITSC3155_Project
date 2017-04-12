@@ -10,12 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405183712) do
+ActiveRecord::Schema.define(version: 20170412154507) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "job_id"
+    t.integer  "race_id"
+    t.integer  "hp"
+    t.integer  "strength"
+    t.integer  "dexterity"
+    t.integer  "constitution"
+    t.integer  "intelligence"
+    t.integer  "wisdom"
+    t.integer  "charisma"
+    t.integer  "cantrip"
+    t.index ["job_id"], name: "index_characters_on_job_id"
+    t.index ["race_id"], name: "index_characters_on_race_id"
   end
 
   create_table "jobs", force: :cascade do |t|
