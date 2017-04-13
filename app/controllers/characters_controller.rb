@@ -1,6 +1,7 @@
 class CharactersController < ApplicationController
     def new
         @character = Character.new
+        # @job = Job.find(params[:job_id])
     end
     
     def index
@@ -41,7 +42,8 @@ class CharactersController < ApplicationController
     
     private
     def character_params
-        params.require(:character).permit(:name, :race_id, :job_id)
+        params.require(:character).permit(:name, :race_id, :job_id,
+        :hp, :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma, :cantrip)
     end
     
 end
