@@ -1,0 +1,5 @@
+Class,Starting HP,Hit Dice,Primary Ability,Saving Throw Profiencies,Armor Proficiencies,Weapon Proficiencies,Proficiency Bonus,Skills,Starting Equip,Cantrips,Spell Slots,Spells
+Cleric,8,d8,Wisdom,"Wisdom, Charisma","light, medium, shields",Simple weapons,2,"history, insight, medicine, persuasion, religion","Mace, scale mail, shield, holy symbol, priests pack, crossbow, 20 bolts",3,2,"cure wounds, bless"
+Fighter,10,d10,"Strength, Dexterity","Strength, Constitution","all armor, shields",simple martial weapons,2,"animal handeling, acrobatics","longbow, 20 arrows, leather armor, 2hand axes, explorer pack, battle axe",n/a,N/A,N/A
+Rogue,8,d8,Dexterity,"dexterity, intelligence",light armor,"simple weapons, hand crossbows, rapiers, longswords, shortswords",2,"Expertise, Sneak Attack, Thieves’ Cant","leather armor, 2 daggers, theif's tools, burgler pack, short bow, 20 arrows, rapier",N/A,N/A,N/A
+Wizard,6,d6,Intelligence,"intelligence, wisdom",N/A,"Daggers, darts, slings, quarterstaffs, light crossbows",2,N/a,"quarter staff, component pouch, spellbook, scholar pack",3,2,"detect magic, Mage Armor, Magic Missile, sleep, burning hands, comprehend languages"
