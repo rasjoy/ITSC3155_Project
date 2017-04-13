@@ -12,7 +12,7 @@
     <% @characters.each do |character| %>
     <tr>
         <td> <%= link_to character.name, character_path(character) %></td>
-        <td></td>
+        <td><%= character.job %></td>
         <td></td>
         <td><%= character.created_at %></td>
     </tr>
