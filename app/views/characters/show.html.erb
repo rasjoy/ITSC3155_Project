@@ -11,5 +11,5 @@
     <strong>Name:</strong>
     <%= @character.name %><br>
     <strong>Job:</strong>
-    <%= @character.job.name %>
+    <%= @character.job.name if @character.job %>
 </p>
