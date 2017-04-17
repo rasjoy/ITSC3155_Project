@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412154507) do
+ActiveRecord::Schema.define(version: 20170417170810) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20170412154507) do
   create_table "jobs", force: :cascade do |t|
     t.string   "name"
     t.integer  "startingHP"
-    t.integer  "hitDice"
+    t.string   "hitDice"
     t.string   "primaryAbility"
     t.string   "savingThrow1"
     t.string   "savingThrow2"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20170412154507) do
     t.string   "language3"
     t.boolean  "darkVision"
     t.text     "weaponProf"
-    t.text     "armorProf"
+    t.text     "prof"
     t.text     "extraAbility1"
     t.text     "extraAbility2"
     t.text     "extraAbility3"
