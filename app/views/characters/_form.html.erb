@@ -20,6 +20,7 @@ this article from being saved:
     <%= f.text_field :name %> <br>
     <%= f.label :job %> 
     <%= f.collection_select :job_id, Job.all,:id,:name, include_blank: true %> <br>
+     <%= f.collection_select :race_id, Race.all,:id,:name, include_blank: true %> <br>
 
     <%= f.label :race %>
 </p>
