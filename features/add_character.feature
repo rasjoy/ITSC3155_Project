@@ -19,7 +19,8 @@ Scenario: As a DM I want to create a character named Trogdor the Burninator who 
   Then I should be on the "Create Character" page
   And I should see the "Name" field
   And I should enter "Trogdor the Burninator" in the "Name" field
-  And I should see the "Job" select
-  And I should have "Rogue" in "Job" select
+  And I should see the "Class" select
+  And I want verify that "Rogue", "Fighter", and "Wizard" are in "Class" select
+  And I should have "Rogue" in "Class" select
   And I should see the "Race" select
   And I should have "joe" in "Race" select

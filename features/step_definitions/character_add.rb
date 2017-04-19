@@ -27,3 +27,6 @@ Then(/^I should have "([^"]*)" in "([^"]*)" select$/) do |field_value, select_na
   page.has_select?(select_name, :selected => field_value)
 end
 
+Then(/^I want verify that "([^"]*)", "([^"]*)", and "([^"]*)" are in "([^"]*)" select$/) do |arg1, arg2, arg3, arg4|
+  pending # Write code here that turns the phrase above into concrete actions
+end
