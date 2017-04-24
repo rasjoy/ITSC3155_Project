@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170419161134) do
+ActiveRecord::Schema.define(version: 20170424160215) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
@@ -50,8 +50,18 @@ ActiveRecord::Schema.define(version: 20170419161134) do
   end
 
   create_table "modifiers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "race"
+    t.string   "job"
+    t.integer  "hp"
+    t.integer  "strength"
+    t.integer  "dexterity"
+    t.integer  "constitution"
+    t.integer  "intelligence"
+    t.integer  "wisdom"
+    t.integer  "charisma"
+    t.integer  "cantrip"
   end
 
   create_table "races", force: :cascade do |t|
