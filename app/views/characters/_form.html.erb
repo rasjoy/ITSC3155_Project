@@ -18,9 +18,9 @@ this article from being saved:
 <p>
     <%= f.label :name %> 
     <%= f.text_field :name %> <br>
-    <%= f.label :class %> 
+    <%= f.label :job_id %> 
     <%= f.collection_select :job_id, Job.all,:id,:name, include_blank: true %> <br>
-    <%= f.label :race %>
+    <%= f.label :race_id %>
     <%= f.collection_select :race_id, Race.all,:id,:name, include_blank: true %> <br>
     
 </p>
