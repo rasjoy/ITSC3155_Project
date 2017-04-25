@@ -14,7 +14,12 @@
       <li><%= link_to "Create Character", new_character_path, class: "#{cp(new_character_path)} navButton" %></li>
       <li><%= link_to "Available Jobs", jobs_path, class: "#{cp(jobs_path)} navButton" %></li>
       <li><%= link_to "Available Races", races_path, class: "#{cp(races_path)} navButton" %></li>
-      <li style="float:right"><%= link_to "Login", root_path, class: "#{cp(root_path)} navButton" %></li>
+      <li style="float:right">
+        <% if current_user %>
+          <%= link_to "Sign Out", signout_path, id: "sign_out", class: "navButton" %>
+        <% else %>
+          <%= link_to "Sign In", "/auth/google_oauth2", id: "sign_in", class: "navButton" %>
+        <% end %></li>
     </ul>
   </div>
 <div class="center">

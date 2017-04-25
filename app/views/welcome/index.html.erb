@@ -1,2 +1,6 @@
-<h1>Welcome!!!</h1>
-<p>Please login to access your Characters </p>
+<% if current_user %>
+    <h1>Welcome <%= current_user.name %>!!!</h1>
+<% else %>
+    <h1>Please sign in with Google to create and save your characters!</h1>
+<% end %>
+<p>This website will allow you to quickly create D&D characters.</p>
