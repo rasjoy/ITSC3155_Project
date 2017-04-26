@@ -1,9 +1,16 @@
 <table>
     <tr>
-        <td><%= link_to 'Edit', edit_character_path(@character) %></td>
-        <td><%= link_to 'Delete', character_path(@character),
+        <td><% if current_user %>
+            <% if current_user.id == @character.user_id %>
+                <%= link_to 'Edit', edit_character_path(@character) %>
+        </td>
+        <td>
+                <%= link_to 'Delete', character_path(@character),
                               method: :delete,
-                              data: { confirm: 'Are you sure?' } %></td>
+                              data: { confirm: 'Are you sure?' } %>
+            <% end %>
+            <% end %>
+        </td>
     </tr>
 </table>
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425223908) do
+ActiveRecord::Schema.define(version: 20170426013743) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
@@ -26,8 +26,11 @@ ActiveRecord::Schema.define(version: 20170425223908) do
     t.integer  "wisdom"
     t.integer  "charisma"
     t.integer  "cantrip"
+    t.string   "creator"
+    t.integer  "user_id"
     t.index ["job_id"], name: "index_characters_on_job_id"
     t.index ["race_id"], name: "index_characters_on_race_id"
+    t.index ["user_id"], name: "index_characters_on_user_id"
   end
 
   create_table "jobs", force: :cascade do |t|

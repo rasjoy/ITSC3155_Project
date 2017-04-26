@@ -5,6 +5,7 @@
         <th><h2>Name</h2</th>
         <th><h2>Job</h2></th>
         <th><h2>Race</h2></th>
+        <th><h2>Creator</h2></th>
         <th><h2>Birthdate</h2></th>
     </tr>
     
@@ -13,7 +14,8 @@
     <tr>
         <td> <%= link_to character.name, character_path(character) %></td>
         <td><%= character.job.name if character.job %></td>
-        <td></td>
+        <td><%= character.race.name if character.race %></td>
+        <td><%= character.user.name if character.user %></td>
         <td><%= character.created_at %></td>
     </tr>
     <% end %>

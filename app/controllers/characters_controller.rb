@@ -14,6 +14,8 @@ class CharactersController < ApplicationController
     
     def create
           @character = Character.new(character_params)
+          @character.creator = current_user.name
+          @character.user_id = current_user.id
         if @character.save
             redirect_to @character
         else
@@ -43,7 +45,7 @@ class CharactersController < ApplicationController
     private
     def character_params
         params.require(:character).permit(:name, :race_id, :job_id,
-        :hp, :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma, :cantrip)
+        :hp, :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma, :cantrip, :creator, :user_id)
     end
     
 end
