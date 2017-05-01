@@ -13,7 +13,7 @@ Scenario: As a DM I want to be able to navigate to the New Character form
   And I should see the "Race" select
   
   
-Scenario: As a DM I want to create a character named Trogdor the Burninator who is an Rogue and Joe
+Scenario: As a DM I want to create a character named Trogdor the Burninator who is an Rogue and LightFoot Halfing 
   Given I am at the home page
   When I click on the "Create Character" link
   Then I should be on the "Create Character" page
@@ -23,5 +23,5 @@ Scenario: As a DM I want to create a character named Trogdor the Burninator who 
   And I want verify that "Rogue", "Fighter", and "Wizard" are in "Job" select
   And I should have "Rogue" in "Job" select
   And I should see the "Race" select
-  And I should have "joe" in "Race" select
+  And I should have "LightFoot Halfing" in "Race" select
   And I should click on the "Create Character"  button

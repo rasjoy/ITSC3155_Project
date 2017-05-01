@@ -1,22 +1,23 @@
 <h1>Jobs</h1>
-<style>#tbl{width=80%;}</style>
+<style>#tbl{width=20%;}</style>
 <table id="tbl">
     <tr>
-        <th>Type</th>
-        <th>Starting HP</th>
-        <th>Hit Dice</th>
-        <th>Primary Ability</th>
-        <th>First Saving Throw</th>
-        <th>Second Saving Throw</th>
-        <th>Armor Profiencies</th>    
-        <th>Weapon Profiencies</th>
-        <th>Profiencies Bonus</th>
-        <th>Skills</th>
-        <th>Starting Equipment</th>
-        <th>Cantrips</th>
-        <th>Spell Slots</th>
-        <th>Spells</th>
+            <th>Type</th>
+            <th>Starting HP</th>
+            <th>Hit Dice</th>
+            <th>Primary Ability</th>
+            <th>First Saving Throw</th>
+            <th>Second Saving Throw</th>
+            <th>Armor Profiencies</th>    
+            <th>Weapon Profiencies</th>
+            <th>Profiencies Bonus</th>
+            <th>Skills</th>
+            <th>Starting Equipment</th>
+            <th>Cantrips</th>
+            <th>Spell Slots</th>
+            <th>Spells</th>
     </tr>
+
     <% @jobs.each do |job| %>
     <tr>
         <td><%= job.name%></td>
@@ -37,3 +38,4 @@
     <% end %>
     
 </table>
+

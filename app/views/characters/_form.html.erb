@@ -1,3 +1,4 @@
+<script type="text/javascript" scr="../../javascripts/charCalculation.js"></script>
 <%= form_for @character do |f| %> 
 <% if @character.errors.any? %>  
 
@@ -8,21 +9,22 @@ this article from being saved:
 </h2>
 
 <ul>         
-<% @character.errors.full_messages.each do |msg| %>          
+<% @character.errors.full_messages.each do |msg| %>     
+
 <li><%= msg %>
 </li>         
 <% end %>       
 </ul>     
 </div>   
 <% end %>  
+
 <p>
-    <%= f.label :name %> 
-    <%= f.text_field :name %> <br>
-    <%= f.label :job_id %> 
-    <%= f.collection_select :job_id, Job.all,:id,:name, include_blank: true %> <br>
-    <%= f.label :race_id %>
-    <%= f.collection_select :race_id, Race.all,:id,:name, include_blank: true %> <br>
-    
+    <%= f.label(:name) %> <br>
+    <%= f.text_field(:name) %> <br>
+    <%= f.label(:job_id) %>  <br>
+    <%= f.collection_select :job_id, Job.all,:id,:name, include_blank: true, onchange: roll() %> <br>
+    <%= f.label(:race_id) %> <br>
+    <%= f.collection_select :race_id, Race.all,:id,:name, include_blank: true, onchange: roll() %> <br>
 </p>
 
 <p>     

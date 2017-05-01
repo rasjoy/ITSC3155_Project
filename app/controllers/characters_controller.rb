@@ -13,9 +13,21 @@ class CharactersController < ApplicationController
     end
     
     def create
-          @character = Character.new(character_params)
-          @character.creator = current_user.name
-          @character.user_id = current_user.id
+        values = Array.new
+        6.times do
+            values.push(rand(6) + rand(6) + rand(6) + 3)
+        end
+        values.sort!
+        @character = Character.new(character_params)
+        @character.creator = current_user.name
+        @character.user_id = current_user.id
+        @character.hp = 0
+        @character.constitution = values[0]
+        @character.intelligence = values[1]
+        @character.wisdom = values[2]
+        @character.charisma = values[3]
+        @character.strength = values[4]
+        @character.dexterity = values[5]
         if @character.save
             redirect_to @character
         else
