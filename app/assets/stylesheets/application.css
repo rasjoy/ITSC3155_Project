@@ -88,3 +88,17 @@ ul.navbar {
     padding: 10px;
     background-color: grey;
 }
+
+#lh {
+    width:50%;
+    float:left;
+    background-color: grey;
+    height:100%;
+}
+
+#rh {
+    width:50%;
+    float:left;
+    background-color: grey;
+    height:100%;
+}
