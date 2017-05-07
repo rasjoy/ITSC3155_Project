@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170507025230) do
+ActiveRecord::Schema.define(version: 20170507165727) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "job_id"
     t.integer  "race_id"
     t.integer  "hp"
@@ -28,6 +28,35 @@ ActiveRecord::Schema.define(version: 20170507025230) do
     t.integer  "cantrip"
     t.string   "creator"
     t.integer  "user_id"
+    t.string   "abilityScore"
+    t.string   "maxAge"
+    t.integer  "weight"
+    t.string   "alignment"
+    t.string   "size"
+    t.integer  "speed"
+    t.string   "language1"
+    t.string   "language2"
+    t.string   "language3"
+    t.boolean  "darkVision"
+    t.text     "weaponProf"
+    t.text     "prof"
+    t.text     "extraAbility1"
+    t.text     "extraAbility2"
+    t.text     "extraAbility3"
+    t.text     "extraAbility4"
+    t.text     "extraAbility5"
+    t.integer  "startingHP"
+    t.string   "hitDice"
+    t.string   "primaryAbility"
+    t.string   "savingThrow1"
+    t.string   "savingThrow2"
+    t.text     "armorPref"
+    t.text     "weaponPref"
+    t.integer  "profBonus"
+    t.         "skills"
+    t.string   "startingEquip"
+    t.integer  "spellSlots"
+    t.text     "spells"
     t.index ["job_id"], name: "index_characters_on_job_id"
     t.index ["race_id"], name: "index_characters_on_race_id"
     t.index ["user_id"], name: "index_characters_on_user_id"
