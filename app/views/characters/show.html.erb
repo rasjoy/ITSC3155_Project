@@ -15,10 +15,32 @@
 </table>
 
 <p>
-    <strong>Name:</strong>
-    <%= @character.name %><br>
-    <strong>HP:</strong>
-    <%= @character.hp %><br>
+    <table style="width:50%" border="4px">
+        <tr>
+            <td> <strong>Name:</strong> </td>
+            <td> <%= @character.name %> </td>
+            <td> <strong>Alignment:</strong> </td>
+            <td> <%= @character.alignment %> </td>
+        </tr>
+        <tr>
+            <td> <strong>HP:</strong> </td>
+            <td> <%= @character.hp %> </td>
+            <td> <strong>Hit Dice:</strong> </td>
+            <td> <%= @character.hitDice%> </td>
+        </tr>
+        <tr>
+            <td> <strong>Size:</strong> </td>
+            <td> <%= @character.size %> </td>
+            <td> <strong>Speed:</strong> </td>
+            <td> <%= @character.speed %> </td>
+        </tr>
+        <tr>
+            <td> <strong>Age:</strong> </td>
+            <td> <%= @character.maxAge %> </td>
+            <td> <strong>Weight:</strong> </td>
+            <td> <%= @character.weight %> </td>
+        </tr>
+    </table>
     <table style="width:100%">
   <tr>
     <th></th>
@@ -45,28 +67,18 @@
     <td><%= @character.wisdomMod %></td>
   </tr>
 </table>
+  
     <strong>Ability Score:</strong>
     <%= @character.abilityScore %> <br>
-    <strong>Age:</strong>
-    <%= @character.maxAge %> <br>
-    <strong>Weight:</strong>
-    <%= @character.weight %> <br>
-    <strong>Alignment:</strong>
-    <%= @character.alignment %> <br>
-    <strong>Size:</strong>
-    <%= @character.size %> <br>
-    <strong>Speed:</strong>
-    <%= @character.speed %> <br>
-    <strong>Language:</strong>
-    <%= @character.language1 %> 
-    <%= @character.language2 %> 
-    <%= @character.language3 %> <br>
-    <strong>Dark Vision:</strong>
-    <%= @character.darkVision %> <br>
+    <strong>Saving Throws:</strong>
+    <%= @character.savingThrow1%> 
+    <%= @character.savingThrow2%> <br>
     <strong>Weapon Proficeincy:</strong>
     <%= @character.weaponProf %> <br>
     <strong>Proficeincy:</strong>
     <%= @character.prof %> <br>
+    <strong>Primary Ability:</strong>
+    <%= @character.primaryAbility%> <br>
     <strong>Ability 1:</strong>
     <%= @character.extraAbility1 %> <br>
     <strong>Ability 2:</strong>
@@ -77,13 +89,12 @@
     <%= @character.extraAbility4 %> <br>
     <strong>Abilitie 5:</strong>
     <%= @character.extraAbility5 %> <br>
-    <strong>Hit Dice:</strong>
-    <%= @character.hitDice%> <br>
-    <strong>Primary Ability:</strong>
-    <%= @character.primaryAbility%> <br>
-    <strong>Saving Throws:</strong>
-    <%= @character.savingThrow1%> 
-    <%= @character.savingThrow2%> <br>
+    <strong>Language:</strong>
+    <%= @character.language1 %> 
+    <%= @character.language2 %> 
+    <%= @character.language3 %> <br>
+    <strong>Dark Vision:</strong>
+    <%= @character.darkVision %> <br>    
     <strong>Preferences:</strong>
     <%= @character.armorPref%> 
     <%= @character.weaponPref%> <br>
@@ -99,4 +110,5 @@
     <%= @character.spells%> <br>
     <strong>Cantrips:</strong>
     <%= @character.cantrip%> <br>
+
 </p>
