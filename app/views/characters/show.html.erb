@@ -19,16 +19,42 @@
     <%= @character.name %><br>
     <strong>HP:</strong>
     <%= @character.hp %><br>
+    <table style="width:100%">
+  <tr>
+    <th></th>
+    <th>Strength</th>
+    <th>Dexterity</th> 
+    <th>Constitution</th>
+    <th>Intelligence</th>
+    <th>Wisdom</th>
+  </tr>
+  <tr>
+    <td><strong>Amount</strong></td>
+    <td><%= @character.strength %></td>
+    <td><%= @character.dexterity  %></td>
+    <td><%= @character.constitution %></td>
+    <td><%= @character.intelligence  %></td>
+    <td><%= @character.wisdom %></td>
+  </tr>
+  <tr>
+    <td><strong>Modifier</strong></td>
+    <td><%= @character.strengthMod %></td>
+    <td><%= @character.dexterityMod  %></td>
+    <td><%= @character.constitutionMod %></td>
+    <td><%= @character.intelligenceMod  %></td>
+    <td><%= @character.wisdomMod %></td>
+  </tr>
+</table>
     <strong>Strength:</strong>
-    <%= @character.strength %> <br>
+     <br>
     <strong>Dexterity:</strong>
-    <%= @character.dexterity  %> <br>
+     <br>
     <strong>Constitution:</strong>
-    <%= @character.constitution %><br>
+    <br>
     <strong>Intelligence:</strong>
-    <%= @character.intelligence  %> <br>
+     <br>
     <strong>Wisdom:</strong>
-    <%= @character.wisdom %><br>
+   <br>
     <strong>Ability Score:</strong>
     <%= @character.abilityScore %> <br>
     <strong>Age:</strong>

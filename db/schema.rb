@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170507165727) do
+ActiveRecord::Schema.define(version: 20170507213835) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "job_id"
     t.integer  "race_id"
     t.integer  "hp"
@@ -57,6 +57,12 @@ ActiveRecord::Schema.define(version: 20170507165727) do
     t.string   "startingEquip"
     t.integer  "spellSlots"
     t.text     "spells"
+    t.integer  "strengthMod"
+    t.integer  "intelligenceMod"
+    t.integer  "constitutionMod"
+    t.integer  "wisdomMod"
+    t.integer  "dexterityMod"
+    t.integer  "charismaMod"
     t.index ["job_id"], name: "index_characters_on_job_id"
     t.index ["race_id"], name: "index_characters_on_race_id"
     t.index ["user_id"], name: "index_characters_on_user_id"
