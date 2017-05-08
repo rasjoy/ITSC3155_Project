@@ -1,6 +1,6 @@
 <h1>Races</h1>
 <style>#tbl{width=20%;}</style>
-<table summary = "Available Races">
+<table table="racetable" summary = "Available Races">
     <tr>
         <th>Race</th>
         <th>Ability Score</th>
@@ -25,11 +25,17 @@
         <td><%= race.alignment%></td>
         <td><%= race.size%></td>
         <td><%= race.speed%></td>
-        <td><%= race.language1%> ,  <%= race.language2%> , <%= race.language3%></td>
+        <td><%= race.language1%> , 
+        <%= race.language2%>,
+        <%= race.language3%></td>
         <td><%= race.darkVision%></td>
         <td><%= race.weaponProf%></td>
         <td><%= race.prof%></td>
-        <td><%= race.extraAbility1%>, <%= race.extraAbility2%>, <%= race.extraAbility3%>, <%= race.extraAbility5%>,<%= race.extraAbility5%></td>
+        <td><%= race.extraAbility1%>
+        , <%= race.extraAbility2%>, 
+        <%= race.extraAbility3%>, 
+        <%= race.extraAbility5%>,
+        <%= race.extraAbility5%></td>
     
     </tr>
     <% end %>
