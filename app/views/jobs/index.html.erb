@@ -8,14 +8,21 @@
             <th>Primary Ability</th>
             <th>First Saving Throw</th>
             <th>Second Saving Throw</th>
-            <th>Armor Profiencies</th>    
+            
+            <th>Armor Profiencies</th>
+         
             <th>Weapon Profiencies</th>
+            </tr>
+            <tr>
+            <th></th>
             <th>Profiencies Bonus</th>
             <th>Skills</th>
             <th>Starting Equipment</th>
             <th>Cantrips</th>
             <th>Spell Slots</th>
             <th>Spells</th>
+            <th></th>
+           
     </tr>
 
     <% @jobs.each do |job| %>
@@ -27,13 +34,21 @@
         <td><%= job.savingThrow1%></td>
         <td><%= job.savingThrow2%></td>
         <td><%= job.armorPref%></td>
+       
         <td><%= job.weaponPref%></td>
+        </tr><tr>
+            <td></td>
         <td><%= job.profBonus%></td>
         <td><%= job.skills%></td>
         <td><%= job.startingEquip%></td>
         <td><%= job.cantrip%></td>
         <td><%= job.spellSlots%></td>
         <td><%= job.spells%></td>
+        <td></td>
+        
+    </tr>
+    <tr>
+        <br>
     </tr>
     <% end %>
     
