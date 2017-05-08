@@ -1,3 +1,10 @@
 
 
 /*# sourceMappingURL=jobs.css.map */
+td{
+    font-size: 75%;
+    padding: 0 8px 0 8px;
+}
+th{
+    font-size: 75%;
+}
