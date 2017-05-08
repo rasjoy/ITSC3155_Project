@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20170507213835) do
     t.text     "armorPref"
     t.text     "weaponPref"
     t.integer  "profBonus"
-    t.         "skills"
+    t.integer  "skills"
     t.string   "startingEquip"
     t.integer  "spellSlots"
     t.text     "spells"

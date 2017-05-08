@@ -14,12 +14,11 @@ class CharactersController < ApplicationController
     
     def create
         ##Modifier list
-        mod = Array.new(31)
-                    
+
         ##Roll dice for character stats
         values = Array.new
-        6.times do
-            values.push(rand(6) + rand(6) + rand(6) + 3)
+        7.times do
+            values.push(rand(6) + rand(6) + rand(6) + rand(6) + rand(6) + 5)
         end
         values.sort!
         @character = Character.new(character_params)
@@ -27,21 +26,20 @@ class CharactersController < ApplicationController
         job = Job.find(@character.job_id)
         @character.creator = current_user.name
         @character.user_id = current_user.id
-        @character.hp = job.startingHP + @character.constitutionMod
-        @character.constitution = values[0]
-        @character.intelligence = values[1]
-        @character.wisdom = values[2]
-        @character.charisma = values[3]
-        @character.strength = values[4]
-        @character.dexterity = values[5]
+        @character.constitution = values[1]
+        @character.intelligence = values[2]
+        @character.wisdom = values[3]
+        @character.charisma = values[4]
+        @character.strength = values[5]
+        @character.dexterity = values[6]
     ##Modifiers
-        @character.constitutionMod = (values[0]/2 -5)
-        @character.intelligenceMod = (values[1]/2 -5)
-        @character.wisdomMod = (values[2]/2 -5)
-        @character.charismaMod = (values[3]/2 -5)
-        @character.strengthMod = (values[4]/2 -5)
-        @character.dexterityMod = (values[5]/2 -5)
-    
+        @character.constitutionMod = (values[1]/2 -5)
+        @character.intelligenceMod = (values[2]/2 -5)
+        @character.wisdomMod = (values[3]/2 -5)
+        @character.charismaMod = (values[4]/2 -5)
+        @character.strengthMod = (values[5]/2 -5)
+        @character.dexterityMod = (values[6]/2 -5)
+        @character.hp = job.startingHP + @character.constitutionMod    
     ## From Race db
         @character.abilityScore = race.abilityScore
         @character.maxAge = race.maxAge

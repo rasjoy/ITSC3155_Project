@@ -6,7 +6,7 @@ When(/^I click on the "([^"]*)" link$/) do |page_name|
   click_link page_name
 end
 
-When(/^I should click on the "([^"]*)"  button$/) do |button_name|
+Then(/^I should click on the "([^"]*)"  button$/) do |button_name|
   click_button button_name
 end
 
