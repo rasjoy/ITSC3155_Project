@@ -6,7 +6,7 @@ When(/^I click on the "([^"]*)" link$/) do |page_name|
   click_link page_name
 end
 
-Then(/^I should click on the "([^"]*)"  button$/) do |button_name|
+When(/^I click on the "([^"]*)" button$/) do |button_name|
   click_button button_name
 end
 
@@ -30,6 +30,10 @@ Then(/^I should have "([^"]*)" in "([^"]*)" select$/) do |field_value, select_na
   page.has_select?(select_name, :selected => field_value)
 end
 
+Then(/^I should select "([^"]*)" in "([^"]*)"$/) do |field_value, select_name|
+  page.find(select_name).find(field_value).select_option
+end
+
 Then(/^I want verify that "([^"]*)", "([^"]*)", and "([^"]*)" are in "([^"]*)" select$/) do |arg1, arg2, arg3, select_name|
   page.has_select?(select_name, :with_options => [arg1, arg2, arg3])
 end
@@ -46,7 +50,6 @@ Then(/^I should be on the "([^"]*)" page$/) do |page_name|
   expect(page).to have_content(page_name)
 end
 
-When(/^I should click on the "([^"]*)" button$/) do |button_name|
-  click_button button_name
+When(/^I should see "([^"]*)" in header$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
 end
-
